@@ -1,21 +1,10 @@
-def to_124(n):
-    answer = ''
-    while (n):
-        answer = str(n % 3) + answer
-        print("answer == ", answer)
-        n = n // 3
-        print("n == ", n)
-    result = answer
-    print("result == ", result)
-    return result
-
 def solution(n):
-    answer = jinsu(n)
-    print(answer)
+    numbers = ['4', '1', '2']
+    answer = ''
+    while n:
+        answer = numbers[n % 3] + answer
+        if n % 3 == 0:
+            n = n // 3 - 1
+        else:
+            n //= 3
     return answer
-
-print(int('12121', 3))
-
-print(to_124(151))
-
-print(to_124(3))
